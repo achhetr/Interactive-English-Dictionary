@@ -1,5 +1,4 @@
 import json
-#pip3 install pyspellchecker
 from spellchecker import SpellChecker
 
 # load data.json
@@ -18,7 +17,7 @@ def word_meaning(word):
         if(check_word.lower() == 'y'):
             meaning = data[spell.correction(word)]
         else:
-            meaning = '\n\nWord does not exits! Please double check it\n'
+            meaning = '\n\nWord does not exist! Please double check it\n'
     else:
         meaning = '\n\nWord does not exits! Please double check it\n'
     return meaning
