@@ -17,10 +17,11 @@ def word_meaning(word):
         if(check_word.lower() == 'y'):
             meaning = data[spell.correction(word)]
         else:
-            meaning = '\n\nWord does not exist! Please double check it\n'
+            meaning = 'Word does not exits! Please double check it\n'
     else:
-        meaning = '\n\nWord does not exits! Please double check it\n'
+        meaning = 'Word does not exits! Please double check it\n'
     return meaning
+
 
 # input user input
 user_input = input("\nEnter word for meaning and press enter:  ")
@@ -30,8 +31,9 @@ result = word_meaning(user_input.lower())
 
 # output
 
-if result != '\n\nWord does not exits! Please double check it\n':
+if result != 'Word does not exits! Please double check it\n':
     print("\nMeaning: \n")
     print("\n\n".join(result))
+    print("\n")
 else: 
-    print(result)
+    print("\n\n" + result)
