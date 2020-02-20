@@ -29,5 +29,9 @@ user_input = input("\nEnter word for meaning and press enter:  ")
 result = word_meaning(user_input.lower())
 
 # output
-print("\nMeaning: \n")
-print(result)
+
+if result != '\n\nWord does not exits! Please double check it\n':
+    print("\nMeaning: \n")
+    print("\n\n".join(result))
+else: 
+    print(result)
